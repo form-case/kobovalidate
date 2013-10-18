@@ -1,0 +1,56 @@
+<html>
+<head>
+	<script type="text/javascript">		
+		var formXmlToSave = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n"+
+"		<h:html xmlns:h=\"http://www.w3.org/1999/xhtml\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:jr=\"http://openrosa.org/javarosa\" xmlns:kobo=\"http://www.kobotoolbox.org/xmlns\">\r\n"+
+"		  <h:head>\r\n"+
+"		    <h:title>New Form 1</h:title>\r\n"+
+"		    <model>\r\n"+
+"		      <instance>\r\n"+
+"		        <new_form1 id=\"new_form1\">\r\n"+
+"		          <deviceid/>\r\n"+
+"		          <start/>\r\n"+
+"		          <end/>\r\n"+
+"		          <A01/>\r\n"+
+"		        </new_form1>\r\n"+
+"		      </instance>\r\n"+
+"		      <bind id=\"deviceid\" nodeset=\"/new_form1/deviceid\" type=\"xsd:string\" jr:preload=\"property\" jr:preloadParams=\"deviceid\"/>\r\n"+
+"		      <bind id=\"start\" nodeset=\"/new_form1/start\" type=\"xsd:time\" jr:preload=\"timestamp\" jr:preloadParams=\"start\"/>\r\n"+
+"		      <bind id=\"end\" nodeset=\"/new_form1/end\" type=\"xsd:time\" jr:preload=\"timestamp\" jr:preloadParams=\"end\"/>\r\n"+
+"		      <bind id=\"A01\" nodeset=\"/new_form1/A01\" type=\"xsd:string\" required=\"true()\"/>\r\n"+
+"		      <itext>\r\n"+
+"		        <translation lang=\"English\">\r\n"+
+"		          <text id=\"A01\">\r\n"+
+"		            <value>QuestionA01</value>\r\n"+
+"		          </text>\r\n"+
+"		          <text id=\"A01_1\">\r\n"+
+"		            <value>OptionA01_1</value>\r\n"+
+"		          </text>\r\n"+
+"		        </translation>\r\n"+
+"		      </itext>\r\n"+
+"		    </model>\r\n"+
+"		  </h:head>\r\n"+
+"		  <h:body>\r\n"+
+"		    <select1 bind=\"A01\">\r\n"+
+"		      <label ref=\"jr:itext('A01')\"/>\r\n"+
+"		      <item>\r\n"+
+"		        <label ref=\"jr:itext('A01_1')\"/>\r\n"+
+"		        <value>1</value>\r\n"+
+"		      </item>\r\n"+
+"		    </select1>\r\n"+
+"		  </h:body>\r\n"+
+"		</h:html>";		
+	</script>
+</head>
+<h1>test the Validate applet</h1>
+<br/>
+<br/>
+
+<APPLET codebase="." archive="FormBuilderValidatorApplet.jar, ODK_Validate_v1.6.jar, plugin.jar"
+			CODE="org.oyrm.kobo.formBuilder.validatorApplet.ValidatorApplet.class"
+			WIDTH="600" HEIGHT="400">
+</APPLET>
+
+
+
+</html>
